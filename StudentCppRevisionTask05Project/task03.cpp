@@ -43,9 +43,5 @@ int task03(int v, int t) {
 
 	int s = v * t;
 
-	if (s == 0) {
-		return 0;
-	}
-
-	return s > 0 ? s % 56 : 56 - (abs(s) % 56);
+	return s != 0 ? (s > 0 ? s % 56 : 56 - (abs(s) % 56)) : 0;
 }
