@@ -37,21 +37,7 @@ bool task02(int number) {
 		return false;
 	}
 
-	bool palindrom = false;
-
-	if (number < 10) {
-		palindrom = true;
-	}
-	else if (number < 100 && number / 10 == number % 10) {
-		palindrom = true;
-	}
-	else if (number < 1000 && number > 99 && number / 100 == number % 10) {
-		palindrom = true;
-	}
-	else if (number / 1000 == number % 10 && number > 999 && (number / 10) % 10 == (number / 100) % 10) {  
-		palindrom = true;
-		
-	}
-
-    return palindrom;
-}
+    return (number < 10) || (number < 100 && number / 10 == number % 10) ||
+		(number < 1000 && number > 99 && number / 100 == number % 10) || 
+		(number / 1000 == number % 10 && number > 999 && (number / 10) % 10 == (number / 100) % 10);
+} 
