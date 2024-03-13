@@ -43,9 +43,5 @@ int taskX(int h, int a, int b) {
 		return 0;
 	}
 
-	if (a > h) {
-		return 1;
-	}
-
-	return ((h - b) / (a - b)) + ((h - b) % (a - b) == 0 ? 0 : 1);
+	return a > h ? 1 : ((h - b) / (a - b)) + ((h - b) % (a - b) == 0 ? 0 : 1);
 }
